@@ -1,7 +1,9 @@
 import React from 'react';
-import Navbar from './components/navbar.jsx';
+import Navbar from '.Navbar2.jsx';
 import Background from './components/background.jsx';
 import Card from './components/Gradient-Card.jsx'
+import BlogList from './BlogList.jsx';
+import Footer from './Footer.jsx';
 
 function App() {
     return (    
@@ -9,8 +11,13 @@ function App() {
             <Navbar />
             <Background/>
             <Card/>
+            {/* <BlogList/> */}
+            <Footer/>
+           
         </div>
     );
 }
 
 export default App;
+
+
