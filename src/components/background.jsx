@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import img from "../assets/img1.png";
 import { HiSparkles } from "react-icons/hi";
+import { motion } from 'framer-motion';
 
 // Background component renders the animated starfield and content
 const Background = () => {
@@ -106,7 +107,7 @@ const Background = () => {
   return (
     <div className="relative min-h-screen overflow-hidden bg-custom-gradient">
       {/* Canvas for starfield animation */}
-      <canvas ref={canvasRef} className="absolute inset-0 scale-[3.7] top-[20%] w-full h-full bg-transparent" />
+      <canvas ref={canvasRef} className="absolute inset-0 scale-[3.9] top-[20%] w-full h-full bg-transparent" />
       {/* Overlay content */}
       <div className="relative z-10 flex flex-col items-center justify-center space-y-8 mt-14">
         {/* Notification banner */}
@@ -123,8 +124,32 @@ const Background = () => {
         <img
           src={img}
           alt="Reflect preview"
-          className="border-double border-8 flex justify-center items-end border-slate-800 rounded-3xl h-[600px] backdrop-blur"
+          className="border-double border-8 flex justify-center items-end border-slate-800 rounded-3xl h-[800px] backdrop-blur"
         />
+      </div>
+      <div className="absolute inset-0">
+        {Array(20)
+          .fill(null)
+          .map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-1 h-1 bg-purple-400 rounded-full"
+              animate={{
+                x: ['0%', '100%'],
+                y: ['0%', '100%'],
+                opacity: [0, 1, 0],
+              }}
+              transition={{
+                duration: Math.random() * 10 + 5,
+                repeat: Infinity,
+                delay: Math.random() * 5,
+              }}
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+            />
+          ))}
       </div>
     </div>
   );
