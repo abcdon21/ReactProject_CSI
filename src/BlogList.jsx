@@ -1,5 +1,26 @@
 import React from "react";
 
+const CategoryTags = () => (
+  <div className="flex space-x-4 mb-12">
+    <button className="px-4 py-2 bg-blue-900 text-white rounded-full hover:bg-blue-800">
+      All Tags
+    </button>
+    <button className="px-4 py-2 text-gray-300 hover:bg-gray-800 rounded-full flex items-center">
+      <span className="mr-2">📱</span> Product Updates
+    </button>
+    <button className="px-4 py-2 text-gray-300 hover:bg-gray-800 rounded-full flex items-center">
+      <span className="mr-2">💭</span> Reflect Workflows
+    </button>
+    <button className="px-4 py-2 text-gray-300 hover:bg-gray-800 rounded-full flex items-center">
+      <span className="mr-2">🛠</span> Toolshed Interviews
+    </button>
+    <button className="px-4 py-2 text-gray-300 hover:bg-gray-800 rounded-full flex items-center">
+      <span className="mr-2">💡</span> Articles
+    </button>
+  </div>
+);
+
+
 const BlogList = () => {
   const blogs = [
     {
@@ -35,9 +56,16 @@ const BlogList = () => {
   ];
 
   return (
-    <section className="bg-gray-100 py-10">
+    <section className="bg-[#0a061c] py-10">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-6">Latest Blogs</h2>
+      
+      <h1 className="text-5xl font-bold text-white mb-4 text-gray-400">Reflect Blog</h1>
+      <p className="text-gray-400 text-xl mb-12 max-w-3xl">
+        Learn how to think better by taking notes. Improve your note-taking with AI, learn 
+        new workflows, and see how notable founders and builders setup their work 
+        environments.
+      </p>
+      <CategoryTags />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {blogs.map((blog, index) => (
             <div

@@ -3,7 +3,7 @@ import React from "react";
 
 
 const Navbar = () => (
-  <nav className="bg-[#0a061c] py-4">
+  <nav className="bg-[#0a061c] backdrop-blur-4 py-4">
     <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
       <div className="flex items-center space-x-2">
         <div className="w-8 h-8 bg-purple-600 rounded-lg"></div>
