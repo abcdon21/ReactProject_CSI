@@ -1,13 +1,13 @@
-import { colors, borderRadius, transitions } from '../constants/styles';
+import { colors } from '../constants/styles';
 import logo from "../assets/logo.png";
 
 const Navbar = () => {
     const navItems = [
-        { label: "Product", href: "#" },
-        { label: "Pricing", href: "#" },
+        { label: "Product", href: "./Features1.jsx" },
+        { label: "Pricing", href: "./Pricing.jsx" },
         { label: "Company", href: "#" },
-        { label: "Blog", href: "#" },
-        { label: "Changelog", href: "#" },
+        { label: "Blog", href: "./BlogList.jsx" },
+        { label: "Changelog", href: "./Changelog.jsx" },
     ];
 
     return (
