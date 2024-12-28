@@ -1,12 +1,16 @@
 import logo from "../assets/logo.png";
+import Home from '../Pages/Home';
+import Blog from '../Pages/Blog';
+import Change from '../Pages/Change';
+import Login from '../Pages/Loginpage';
 
 const Navbar = () => {
     const Navitems = [
-        { label: "Product", href: "#" },
-        { label: "Pricing", href: "#" },
-        { label: "Company", href: "#" },
-        { label: "Blog", href: "#" },
-        { label: "Changelog", href: "#" },
+        { label: "Product", href: "/" },
+        { label: "Features", href: "features" },
+        { label: "Integrations", href: "integration" },
+        { label: "Blog", href: 'bloglist' },
+        { label: "Changelog", href: 'changelog' },
     ];
 
     return (
@@ -35,13 +39,13 @@ const Navbar = () => {
                 {/* Buttons Section */}
                 <div className="hidden px-12 py-2 text-[19px] lg:flex items-center space-x-4">
                     <a
-                        href="#"
+                        href="login"
                         className="py-2 px-3 text-white rounded-md hover:bg-slate-500/10"
                     >
                         Login
                     </a>
                     <a
-                        href="#"
+                        href="sign-in"
                         className= "py-2 px-3 text-white rounded-md hover:bg-slate-500/10"
                     >
                         Sign Up
