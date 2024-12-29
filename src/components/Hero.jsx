@@ -6,10 +6,10 @@ import { motion } from 'framer-motion';
 
 const Background = () => {
 return (
-    <div className="relative min-h-screen mt-[60px] overflow-hidden bg-transparent">
+    <div className="relative min-h-screen mt-[6rem] overflow-hidden bg-transparent z-20">
       {/* Overlay content */}
-      <div className="absolute top-[17%] left-[26%] text-xl">
-      <div className="relative z-10 flex flex-col items-center justify-center space-y-8">
+      <div className="flex items-center justify-center h-[12rem] text-xl">
+      <div className="z-10 flex flex-col items-center justify-center space-y-8">
         {/* Notification banner */}
         <div className="flex items-center justify-evenly w-80 h-8 border border-slate-500/30 rounded-3xl backdrop-blur-sm bg-slate-900/10 hover:border-slate-400/50">
           <HiSparkles className="text-slate-200 px-0.5" />
@@ -22,10 +22,14 @@ return (
         </div>
       </div>
       </div>
-      <div className="flex items-center justify-center flex-col mt-[106px]">
+
+      <div className="flex items-center justify-center z-10 flex-col">
+      <div className='z-0 flex items-start justify-center mt-[-12rem]'>
       <video src={vid} loop muted autoPlay playsInline className='h-[39rem] z-2 relative'/>
-      <img src={img} className='h-[45rem] absolute backdrop-blur top-[49%]'/>
       </div>
+      <img src={img} className='h-[40rem] mt-[-19rem] backdrop-blur'/>
+      </div>
+      
       
       <div className="absolute inset-0">
         {Array(20)
